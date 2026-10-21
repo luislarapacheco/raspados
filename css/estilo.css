@@ -1,0 +1,326 @@
+:root {
+    --verde: #4ddd7d;
+    --rosado: #ff0a78;
+    --azul: #060c5c;
+    --blanco: #ffffff;
+    --gris: #f3f3f3;
+    --negro: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--gris);
+}
+
+.navbar {
+    background-color: var(--blanco);
+    min-height: 70px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.logo-helado {
+    color: var(--rosado);
+    font-size: 25px;
+}
+
+.nav-link {
+    color: var(--negro) !important;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--rosado) !important;
+}
+
+.btn-rosado {
+    background-color: var(--rosado);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 28px;
+    font-weight: bold;
+}
+
+.btn-rosado:hover {
+    background-color: #df0064;
+    color: white;
+}
+
+.fondo-verde {
+    background-color: var(--verde);
+}
+
+/* INICIO */
+
+.hero {
+    min-height: 325px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    color: var(--rosado);
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.hero-img {
+    width: 230px;
+    height: 260px;
+    object-fit: cover;
+}
+
+.ventajas {
+    background-color: var(--gris);
+    padding: 15px 0;
+}
+
+.icono-ventaja {
+    font-size: 45px;
+}
+
+.ventaja-texto {
+    font-weight: bold;
+}
+
+/* NOSOTROS */
+
+.nosotros {
+    padding: 25px 0;
+}
+
+.img-local {
+    width: 100%;
+    max-width: 300px;
+    height: 290px;
+    object-fit: cover;
+}
+
+.titulo-seccion {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.valores {
+    padding: 20px 0;
+    background-color: var(--gris);
+}
+
+.valor-icono {
+    font-size: 35px;
+}
+
+/* PRODUCTOS */
+
+/* PRODUCTOS */
+
+.productos {
+    padding: 40px 0 60px;
+}
+
+.producto-card {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.producto-card .card-body {
+    padding: 20px;
+}
+
+.producto-card .card-title {
+    color: #ff0a78;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.producto-card .card-text {
+    color: #222;
+    font-size: 14px;
+}
+
+.producto-card .btn-rosado {
+    margin-top: 8px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    padding: 30px 0 50px;
+}
+
+.dato-contacto {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.form-control {
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+}
+
+/* DETALLE PRODUCTO */
+
+.detalle-producto {
+    padding: 25px 0;
+}
+
+.detalle-img {
+    width: 100%;
+    max-width: 380px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.precio {
+    color: var(--rosado);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-tamano {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.btn-tamano.activo {
+    background-color: var(--rosado);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--azul);
+    color: white;
+    padding: 25px 0;
+    font-size: 13px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--rosado);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding: 35px 0;
+    }
+
+    .hero-img {
+        margin-top: 30px;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    /* MEJORES SABORES */
+
+.mejores-sabores {
+    background-color: #ffffff;
+    padding: 45px 0 55px;
+}
+
+.subtitulo-sabores {
+    color: #444;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.sabor-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 250px;
+    margin: auto;
+    transition: transform 0.2s;
+}
+
+.sabor-card:hover {
+    transform: translateY(-5px);
+}
+
+.sabor-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.sabor-card .card-body {
+    padding: 18px;
+}
+
+.sabor-card h5 {
+    color: #ff0a78;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.sabor-card p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.mejores-sabores {
+    padding: 40px 0 60px;
+}
+
+.subtitulo-sabores {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: #222;
+}
+}
+
