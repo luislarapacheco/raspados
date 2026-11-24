@@ -1,407 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Productos - La Frescura</title>
-
-    <link rel="stylesheet"
-          href="css/bootstrap.css">
-
-    <link rel="stylesheet"
-          href="css/estilo.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | La Frescura Raspados</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
 
-<!-- MENÚ -->
-
-<nav class="navbar navbar-expand">
-
-    <div class="container-fluid">
-
-        <a class="navbar-brand"
-           href="index.html">
-
-            🍧 La Frescura<br>
-
-            <span class="ms-4">
-                RASPADOS
-            </span>
-
-        </a>
-
-
-        <div class="navbar-nav mx-auto">
-
-            <a class="nav-link"
-               href="index.html">
-                INICIO
-            </a>
-
-            <a class="nav-link"
-               href="nosotros.html">
-                NOSOTROS
-            </a>
-
-            <a class="nav-link active"
-               href="productos.html">
-                PRODUCTOS
-            </a>
-
-            <a class="nav-link"
-               href="contacto.html">
-                CONTACTO
-            </a>
-
+<nav class="navbar navbar-expand-lg navbar-dark barra-navegacion sticky-top">
+    <div class="container">
+<a class="navbar-brand logo" href="index.html">
+    <img src="./img/Logo tropical de raspados refrescantes.png"
+         alt="La Frescura Raspados"
+         class="logo-imagen">
+</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link activo" href="productos.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-whatsapp" href="https://wa.me/573008663557" target="_blank">WhatsApp</a>
+                </li>
+            </ul>
         </div>
-
-
-        <a href="productos.html"
-           class="btn btn-rosado">
-
-            PEDIR AHORA
-
-        </a>
-
     </div>
-
 </nav>
 
+<header class="encabezado-pagina">
+    <div class="container text-center">
+        <span class="etiqueta">ENCUENTRA TU FAVORITO</span>
+        <h1>Nuestros <span>productos</span></h1>
+        <p>Sabores irresistibles para refrescar tu día.</p>
+    </div>
+</header>
 
-<!-- PRODUCTOS -->
+<section class="container py-5">
+    <div class="filtros-productos text-center mb-5">
+        <button class="filtro activo" data-filter="todos">Todos</button>
+        <button class="filtro" data-filter="frutales">Sencillos</button>
+        <button class="filtro" data-filter="especiales">Combinados</button>
+    </div>
 
-<section class="fondo-verde productos">
+    <div class="row g-4" id="catalogoProductos">
 
-    <div class="container">
-
-        <h2 class="titulo-seccion">
-            NUESTROS SABORES
-        </h2>
-
-
-        <div class="row g-4">
-
-
-            <!-- COLA -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/ba75a907-66b9-4c83-8964-df382645d1fd.png"
-                         class="card-img-top"
-                         alt="Raspado de Cola">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            RASPADO DE COLA
-                        </h5>
-
-                        <p class="card-text">
-                            Delicioso raspado sabor cola.
-                        </p>
-
-                        <a href="producto.html"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+        <div class="col-md-6 col-lg-4 producto-item" data-category="frutales">
+            <article class="producto-card">
+                <img src="img/ba75a907-66b9-4c83-8964-df382645d1fd.png" class="producto-foto foto-fresa"
+                     alt="Raspado de fresa">
+                <div class="producto-info">
+                    <span class="categoria">SENCILLOS</span>
+                    <h3>Raspado de cola</h3>
+                    <p>Un sabor dulce y refrescante.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Fresa" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
+            </article>
+        </div>
 
-            </div>
-
-
-            <!-- CHICLE -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/images.jpeg"
-                         class="card-img-top"
-                         alt="Raspado de Chicle">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            RASPADO DE CHICLE
-                        </h5>
-
-                        <p class="card-text">
-                            Delicioso sabor a chicle.
-                        </p>
-
-                        <a href="#"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+        <div class="col-md-6 col-lg-4 producto-item" data-category="frutales">
+            <article class="producto-card">
+                <img src="img/images.jpeg" class="producto-foto foto-chicle"
+                     alt="Raspado de chicle">
+                <div class="producto-info">
+                    <span class="categoria">SENCILLOS</span>
+                    <h3>Raspado de Chicle</h3>
+                    <p>Un toque divertido y delicioso.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Chicle" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
+            </article>
+        </div>
 
-            </div>
-
-
-            <!-- PIÑA -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/images (1).jpeg"
-                         class="card-img-top"
-                         alt="Raspado de Piña">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            RASPADO DE PIÑA
-                        </h5>
-
-                        <p class="card-text">
-                            Refrescante sabor a piña.
-                        </p>
-
-                        <a href="#"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+        <div class="col-md-6 col-lg-4 producto-item" data-category="frutales">
+            <article class="producto-card">
+                <img src="img/images (1).jpeg" class="producto-foto foto-pina"
+                     alt="Raspado de piña">
+                <div class="producto-info">
+                    <span class="categoria">SENCILLOS</span>
+                    <h3>Raspado de Piña</h3>
+                    <p>La frescura tropical en cada cucharada.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Piña" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
+            </article>
+        </div>
 
-            </div>
-
-
-            <!-- LIMÓN -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/descarga.jpeg"
-                         class="card-img-top"
-                         alt="Raspado de Limón">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            RASPADO DE LIMÓN
-                        </h5>
-
-                        <p class="card-text">
-                            Refrescante sabor a limón.
-                        </p>
-
-                        <a href="#"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+    
+            <div class="col-md-6 col-lg-4 producto-item" data-category="especiales">
+            <article class="producto-card">
+                <img src="img/descarga (1).jpeg" class="producto-foto foto-pina"
+                     alt="Raspado de piña">
+                <div class="producto-info">
+                    <span class="categoria">COMBINADOS</span>
+                    <h3>Raspado de cola y Piña</h3>
+                    <p>La frescura tropical en cada cucharada.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Piña" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
+            </article>
+        </div>
 
-            </div>
-
-
-            <!-- COLA Y CHICLE -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/images (2).jpeg"
-                         class="card-img-top"
-                         alt="Raspado Cola y Chicle">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            COLA Y CHICLE
-                        </h5>
-
-                        <p class="card-text">
-                            Una deliciosa combinación.
-                        </p>
-
-                        <a href="#"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+   
+                <div class="col-md-6 col-lg-4 producto-item" data-category="especiales">
+            <article class="producto-card">
+                <img src="img/images (2).jpeg" class="producto-foto foto-pina"
+                     alt="Raspado de piña">
+                <div class="producto-info">
+                    <span class="categoria">COMBINADOS</span>
+                    <h3>Raspado de cola y chicle</h3>
+                    <p>La frescura tropical en cada cucharada.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Piña" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
+            </article>
+        </div>
 
-            </div>
-
-
-            <!-- COLA Y PIÑA -->
-
-            <div class="col-12 col-sm-6 col-lg-4">
-
-                <div class="card producto-card h-100">
-
-                    <img src="img/descarga (1).jpeg"
-                         class="card-img-top"
-                         alt="Raspado Cola y Piña">
-
-                    <div class="card-body text-center">
-
-                        <h5 class="card-title">
-                            COLA Y PIÑA
-                        </h5>
-
-                        <p class="card-text">
-                            Combinación de cola y piña.
-                        </p>
-
-                        <a href="#"
-                           class="btn btn-rosado">
-
-                            VER PRODUCTO
-
-                        </a>
-
-                    </div>
-
+       <div class="col-md-6 col-lg-4 producto-item" data-category="frutales">
+            <article class="producto-card">
+                <img src="img/descarga.jpeg" class="producto-foto foto-pina"
+                     alt="Raspado de limon">
+                <div class="producto-info">
+                    <span class="categoria">COMBINADOS</span>
+                    <h3>Raspado de limon</h3>
+                    <p>Para los que prefieren un sabor fuerte.</p>
+                    <strong>$1.000</strong>
+                    <button class="btn btn-rosa w-100 mt-3 btn-pedir"
+                            data-producto="Raspado de Piña" data-precio="5000">
+                        Pedir por WhatsApp
+                    </button>
                 </div>
-
-            </div>
-
-
+            </article>
         </div>
 
     </div>
-
 </section>
 
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-3">
-
-                <strong>
-                    La Frescura
-                </strong>
-
-                <br>
-
-                RASPADOS
-
-            </div>
-
-
-            <div class="col-md-3">
-
-                © 2026 La Frescura Raspados
-
-            </div>
-
-
-            <div class="col-md-2">
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">
-                            INICIO
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="nosotros.html">
-                            NOSOTROS
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="productos.html">
-                            PRODUCTOS
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contacto.html">
-                            CONTACTO
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="col-md-2">
-
-                <strong>
-                    REDES
-                </strong>
-
-                <br>
-
-                Facebook<br>
-                Instagram<br>
-                TikTok<br>
-                📞 Teléfono<br>
-                WhatsApp
-
-            </div>
-
-
-            <div class="col-md-2">
-
-                <strong>
-                    HORARIO DE ATENCIÓN
-                </strong>
-
-                <br><br>
-
-                LUNES A DOMINGO
-
-                <br>
-
-                10:00 AM - 9:00 PM
-
-            </div>
-
-        </div>
-
+<section class="franja-verde">
+    <div class="container text-center">
+        <h2>¿Ya elegiste tu sabor?</h2>
+        <p>Haz tu pedido fácil y rápido por WhatsApp.</p>
+        <a href="https://wa.me/573008663557?text=Hola,%20quiero%20hacer%20un%20pedido"
+           target="_blank" class="btn btn-azul">Hacer mi pedido</a>
     </div>
+</section>
 
+<footer class="pie-pagina">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+<a class="navbar-brand logo" href="index.html">
+    <img src="./img/Logo tropical de raspados refrescantes.png"
+         alt="La Frescura Raspados"
+         class="logo-imagen">
+</a>
+                <p>¡Sabor tropical en cada sorbo!</p>
+            </div>
+            <div class="col-lg-2 col-6">
+                <h5>Enlaces</h5>
+                <a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a>
+                <a href="productos.html">Productos</a><a href="contacto.html">Contacto</a>
+            </div>
+            <div class="col-lg-3 col-6">
+                <h5>Contáctanos</h5>
+                <p>+57 300 866 3557</p><p>Colombia</p>
+            </div>
+            <div class="col-lg-3">
+                <h5>Síguenos</h5>
+                <div class="redes"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a></div>
+            </div>
+        </div>
+        <div class="copyright">© 2026 La Frescura Raspados. Todos los derechos reservados.</div>
+    </div>
 </footer>
 
+<a class="flotante-whatsapp"
+   href="https://wa.me/573008663557"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
 
+<button id="volverArriba"
+        class="volver-arriba"
+        aria-label="Volver arriba">↑</button>
+        
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
 </body>
-
 </html>

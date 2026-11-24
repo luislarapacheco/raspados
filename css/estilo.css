@@ -1,326 +1,612 @@
+/* La Frescura Raspados - css/estilo.css
+   Va DESPUÉS de bootstrap.css para poder sobrescribirlo. */
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap");
+
 :root {
-    --verde: #4ddd7d;
-    --rosado: #ff0a78;
-    --azul: #060c5c;
-    --blanco: #ffffff;
-    --gris: #f3f3f3;
-    --negro: #000000;
+    --rosa: #e8317f;
+    --rosa-oscuro: #c21e66;
+    --azul: #1479b8;
+    --azul-oscuro: #0c4f7a;
+    --verde: #7cc242;
+    --verde-oscuro: #5a9d27;
+    --amarillo: #ffc933;
+    --fondo: #f3fbfd;
+    --texto: #1c2b36;
+    --radio: 20px;
 }
 
+/* ---------- Base ---------- */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--gris);
+    font-family: "Nunito", system-ui, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    line-height: 1.65;
 }
 
-.navbar {
-    background-color: var(--blanco);
-    min-height: 70px;
+h1, h2, h3, h4, h5 {
+    font-family: "Baloo 2", "Nunito", sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--azul-oscuro);
 }
 
-.navbar-brand {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--amarillo);
+    outline-offset: 3px;
 }
 
-.logo-helado {
-    color: var(--rosado);
-    font-size: 25px;
+.etiqueta {
+    display: inline-block;
+    padding: .3rem .9rem;
+    margin-bottom: 1rem;
+    border-radius: 50px;
+    background: var(--amarillo);
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .06em;
 }
 
-.nav-link {
-    color: var(--negro) !important;
-    font-weight: bold;
-    margin: 0 20px;
+/* ---------- Botones ---------- */
+.btn {
+    font-weight: 700;
+    border-radius: 50px;
+    padding: .65rem 1.6rem;
+    transition: background-color .2s, color .2s, border-color .2s;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--rosado) !important;
+.btn-rosa {
+    background: var(--rosa);
+    border: 2px solid var(--rosa);
+    color: #fff;
+}
+.btn-rosa:hover,
+.btn-rosa:focus {
+    background: var(--rosa-oscuro);
+    border-color: var(--rosa-oscuro);
+    color: #fff;
 }
 
-.btn-rosado {
-    background-color: var(--rosado);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 28px;
-    font-weight: bold;
+.btn-azul {
+    background: var(--azul-oscuro);
+    border: 2px solid var(--azul-oscuro);
+    color: #fff;
+}
+.btn-azul:hover,
+.btn-azul:focus {
+    background: #fff;
+    border-color: #fff;
+    color: var(--azul-oscuro);
 }
 
-.btn-rosado:hover {
-    background-color: #df0064;
-    color: white;
+.btn-outline-azul {
+    background: transparent;
+    border: 2px solid var(--azul);
+    color: var(--azul);
+}
+.btn-outline-azul:hover,
+.btn-outline-azul:focus {
+    background: var(--azul);
+    color: #fff;
 }
 
-.fondo-verde {
-    background-color: var(--verde);
+.btn-whatsapp {
+    background: #25d366;
+    border: 2px solid #25d366;
+    color: #fff;
+}
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+    background: #1ebe5a;
+    border-color: #1ebe5a;
+    color: #fff;
 }
 
-/* INICIO */
-
-.hero {
-    min-height: 325px;
-    display: flex;
-    align-items: center;
+/* ---------- Barra de navegación ---------- */
+.barra-navegacion {
+    background: var(--azul-oscuro);
+    padding: .5rem 0;
+    box-shadow: 0 2px 12px rgba(12, 79, 122, .25);
 }
 
-.hero h1 {
-    color: var(--rosado);
-    font-size: 35px;
-    font-weight: normal;
+.logo-imagen {
+    height: 70px;
+    width: auto;
 }
 
-.hero-img {
-    width: 230px;
-    height: 260px;
+.barra-navegacion .nav-link {
+    color: #fff;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    transition: background-color .2s, color .2s;
+}
+.barra-navegacion .nav-link:hover {
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+}
+.barra-navegacion .nav-link.activo {
+    background: var(--amarillo);
+    color: var(--azul-oscuro);
+}
+
+/* ---------- Portada ---------- */
+.portada {
+    padding: 4rem 0 3.5rem;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(255, 201, 51, .35) 0 120px, transparent 121px),
+        radial-gradient(circle at 4% 90%, rgba(232, 49, 127, .15) 0 150px, transparent 151px),
+        var(--fondo);
+    overflow: hidden;
+}
+
+.texto-portada h1 {
+    font-size: clamp(2.8rem, 7vw, 4.8rem);
+    margin-bottom: 1rem;
+}
+.texto-portada h1 span {
+    color: var(--rosa);
+}
+.texto-portada p {
+    font-size: 1.2rem;
+    max-width: 30rem;
+    margin-bottom: 1.8rem;
+}
+
+.imagen-portada {
+    border-radius: 28px;
+    box-shadow: 0 18px 40px rgba(12, 79, 122, .2);
+}
+
+/* ---------- Carrusel ---------- */
+#carruselSabores {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(12, 79, 122, .18);
+}
+#carruselSabores .carousel-item img {
+    height: 420px;
     object-fit: cover;
 }
 
-.ventajas {
-    background-color: var(--gris);
-    padding: 15px 0;
+/* ---------- Productos ---------- */
+.seccion {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.icono-ventaja {
-    font-size: 45px;
+.titulo-seccion h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
 }
-
-.ventaja-texto {
-    font-weight: bold;
-}
-
-/* NOSOTROS */
-
-.nosotros {
-    padding: 25px 0;
-}
-
-.img-local {
-    width: 100%;
-    max-width: 300px;
-    height: 290px;
-    object-fit: cover;
-}
-
-.titulo-seccion {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.valores {
-    padding: 20px 0;
-    background-color: var(--gris);
-}
-
-.valor-icono {
-    font-size: 35px;
-}
-
-/* PRODUCTOS */
-
-/* PRODUCTOS */
-
-.productos {
-    padding: 40px 0 60px;
+.titulo-seccion p {
+    color: #4d6272;
 }
 
 .producto-card {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-    border: 3px solid #ffffff;
-    border-radius: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: var(--radio);
     overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s;
+    box-shadow: 0 8px 22px rgba(12, 79, 122, .12);
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
 }
-
 .producto-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(12, 79, 122, .18);
 }
 
-.producto-card img {
+.producto-foto {
     width: 100%;
-    height: 190px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center;
+}
+/* Ajusta el encuadre de cada foto si hace falta */
+.foto-fresa  { object-position: center; }
+.foto-chicle { object-position: center; }
+.foto-pina   { object-position: center; }
+
+.producto-info {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.producto-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: .3rem;
+}
+.producto-info p {
+    margin-bottom: .6rem;
+    color: #4d6272;
+}
+.producto-info strong {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.5rem;
+    color: var(--rosa);
+}
+.producto-info .btn {
+    margin-top: auto;
 }
 
-.producto-card .card-body {
-    padding: 20px;
+/* ---------- Franja verde ---------- */
+.franja-verde {
+    padding: 4rem 0;
+    background: var(--verde);
+}
+.franja-verde h2 {
+    color: #fff;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: .6rem;
+}
+.franja-verde p {
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
 }
 
-.producto-card .card-title {
-    color: #ff0a78;
-    font-weight: bold;
-    font-size: 19px;
+/* ---------- Pie de página ---------- */
+.pie-pagina {
+    background: var(--azul-oscuro);
+    color: #d6e8f3;
+    padding: 3.5rem 0 1.5rem;
 }
-
-.producto-card .card-text {
-    color: #222;
-    font-size: 14px;
+.pie-pagina h5 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
-
-.producto-card .btn-rosado {
-    margin-top: 8px;
+.pie-pagina p {
+    margin-bottom: .4rem;
 }
-
-/* CONTACTO */
-
-.contacto {
-    padding: 30px 0 50px;
-}
-
-.dato-contacto {
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 35px;
-}
-
-.form-control {
-    border-radius: 0;
-    border: none;
-    padding: 10px;
-}
-
-/* DETALLE PRODUCTO */
-
-.detalle-producto {
-    padding: 25px 0;
-}
-
-.detalle-img {
-    width: 100%;
-    max-width: 380px;
-    height: 400px;
-    object-fit: cover;
-}
-
-.precio {
-    color: var(--rosado);
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.btn-tamano {
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 15px;
-    padding: 8px 20px;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.btn-tamano.activo {
-    background-color: var(--rosado);
-}
-
-/* FOOTER */
-
-footer {
-    background-color: var(--azul);
-    color: white;
-    padding: 25px 0;
-    font-size: 13px;
-}
-
-footer a {
-    color: white;
+.pie-pagina a {
+    display: block;
+    color: #d6e8f3;
     text-decoration: none;
+    margin-bottom: .4rem;
+}
+.pie-pagina a:hover {
+    color: var(--amarillo);
+}
+.pie-pagina .logo-imagen {
+    height: 64px;
+    margin-bottom: .8rem;
+}
+.redes a {
+    display: block;
+}
+.copyright {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    text-align: center;
+    font-size: .9rem;
 }
 
-footer a:hover {
-    color: var(--rosado);
+/* ---------- Botones flotantes ---------- */
+.flotante-whatsapp,
+.volver-arriba {
+    position: fixed;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+    z-index: 1030;
+}
+.flotante-whatsapp {
+    bottom: 20px;
+    background: #25d366;
+    color: #fff;
+}
+.flotante-whatsapp:hover {
+    background: #1ebe5a;
+    color: #fff;
+}
+.volver-arriba {
+    bottom: 84px;
+    background: var(--rosa);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .25s, transform .25s, visibility .25s;
+}
+.volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.volver-arriba:hover {
+    background: var(--rosa-oscuro);
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* =====================================================
+   PÁGINA NOSOTROS
+   ===================================================== */
+
+/* ---------- Encabezado de páginas internas ---------- */
+.encabezado-pagina {
+    padding: 3.5rem 0 3rem;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(255, 201, 51, .35) 0 90px, transparent 91px),
+        radial-gradient(circle at 6% 85%, rgba(124, 194, 66, .3) 0 110px, transparent 111px),
+        var(--fondo);
+    overflow: hidden;
+}
+.encabezado-pagina h1 {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    margin-bottom: .6rem;
+}
+.encabezado-pagina h1 span {
+    color: var(--rosa);
+}
+.encabezado-pagina p {
+    font-size: 1.2rem;
+    max-width: 34rem;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-
-    .hero {
-        text-align: center;
-        padding: 35px 0;
-    }
-
-    .hero-img {
-        margin-top: 30px;
-    }
-
-    .nav-link {
-        margin: 5px 0;
-    }
-
-    footer {
-        text-align: center;
-    }
-
-    footer .col-md-3 {
-        margin-bottom: 20px;
-    }
-    /* MEJORES SABORES */
-
-.mejores-sabores {
-    background-color: #ffffff;
-    padding: 45px 0 55px;
+/* ---------- Historia ---------- */
+.titulo-interno {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 1rem;
+}
+.foto-nosotros {
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 16px 36px rgba(12, 79, 122, .2);
 }
 
-.subtitulo-sabores {
-    color: #444;
-    margin-top: -20px;
-    margin-bottom: 30px;
+/* ---------- Valores ---------- */
+.valores {
+    background: #fff;
+}
+.valor-card {
+    height: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--fondo);
+    border-radius: var(--radio);
+    border-bottom: 5px solid var(--rosa);
+}
+.col-md-4:nth-child(2) .valor-card { border-bottom-color: var(--verde); }
+.col-md-4:nth-child(3) .valor-card { border-bottom-color: var(--amarillo); }
+
+.valor-icono {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 14px rgba(12, 79, 122, .12);
+}
+.valor-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: .4rem;
+}
+.valor-card p {
+    margin-bottom: 0;
+    color: #4d6272;
 }
 
-.sabor-card {
+/* ---------- Galería ---------- */
+.foto-galeria {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: 0 8px 22px rgba(12, 79, 122, .15);
+    transition: transform .2s;
+}
+.foto-galeria:hover {
+    transform: scale(1.03);
+}
+
+/* =====================================================
+   PÁGINA PRODUCTOS
+   ===================================================== */
+
+/* ---------- Filtros ---------- */
+.filtros-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+}
+.filtro {
+    padding: .5rem 1.5rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    color: var(--azul);
+    background: #fff;
+    border: 2px solid var(--azul);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+.filtro:hover {
+    background: rgba(20, 121, 184, .1);
+}
+.filtro.activo {
+    background: var(--azul);
+    color: #fff;
+}
+
+/* Por si el script oculta productos con una clase o con hidden */
+.producto-item.oculto,
+.producto-item[hidden] {
+    display: none;
+}
+
+/* ---------- Tarjetas del catálogo ---------- */
+.categoria {
+    align-self: flex-start;
+    margin-bottom: .5rem;
+    padding: .2rem .8rem;
+    border-radius: 50px;
+    background: var(--verde);
+    color: #fff;
+    font-weight: 700;
+    font-size: .75rem;
+}
+.producto-item[data-category="especiales"] .categoria {
+    background: var(--rosa);
+}
+
+.btn-pedir {
+    border: 2px solid var(--rosa);
+}
+
+/* =====================================================
+   PÁGINA CONTACTO
+   ===================================================== */
+
+/* ---------- Datos de contacto ---------- */
+.contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.contacto-dato h5 {
+    margin-bottom: .1rem;
+    font-size: 1.15rem;
+}
+.contacto-dato p {
+    margin-bottom: 0;
+    color: #4d6272;
+}
+.contacto-icono {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    background: var(--azul);
+    border-radius: 50%;
+}
+.contacto-dato:nth-of-type(2) .contacto-icono { background: var(--rosa); }
+.contacto-dato:nth-of-type(3) .contacto-icono { background: var(--verde-oscuro); }
+
+/* ---------- Formulario ---------- */
+.formulario-card {
+    padding: 2.2rem;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(12, 79, 122, .15);
+    border-top: 6px solid var(--rosa);
+}
+.formulario-card h2 {
+    font-size: 2rem;
+    margin-bottom: .3rem;
+}
+.formulario-card > p {
+    margin-bottom: 1.5rem;
+    color: #4d6272;
+}
+.formulario-card .form-label {
+    font-weight: 700;
+    color: var(--azul-oscuro);
+}
+.formulario-card .form-control {
+    padding: .7rem 1rem;
+    border: 2px solid #cfe3ee;
+    border-radius: 14px;
+    background: var(--fondo);
+}
+.formulario-card .form-control:focus {
+    border-color: var(--azul);
+    background: #fff;
+    box-shadow: 0 0 0 .2rem rgba(20, 121, 184, .2);
+}
+.formulario-card .btn:disabled {
+    opacity: .7;
+}
+
+/* Mensaje de respuesta (el script le pone el color) */
+#respuestaFormulario {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+/* ---------- Mapa ---------- */
+.mapa-contenedor {
+    overflow: hidden;
+    border-radius: 24px;
+    border-bottom: 6px solid var(--verde);
+    box-shadow: 0 12px 30px rgba(12, 79, 122, .15);
+}
+.mapa-contenedor iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 991.98px) {
+    .portada { padding: 2.5rem 0; text-align: center; }
+    .texto-portada p { margin-left: auto; margin-right: auto; }
+    .texto-portada .d-flex { justify-content: center; }
+    .imagen-portada { margin-top: 2rem; }
+    .barra-navegacion .nav-link { margin: .15rem 0; }
+    .encabezado-pagina { padding: 2.5rem 0 2rem; }
+    .formulario-card { padding: 1.5rem; }
+}
+
+@media (max-width: 575.98px) {
+    #carruselSabores .carousel-item img { height: 220px; }
+    .logo-imagen { height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
+.newsletter-contenedor {
+    max-width: 580px;
+    margin: 25px auto;
+    padding: 15px;
+    background: #d9f7f3;
+    border: 2px solid #2ec4b6;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(46, 196, 182, 0.18);
+    overflow: hidden;
+}
+
+.newsletter-contenedor iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
     border: none;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 250px;
-    margin: auto;
-    transition: transform 0.2s;
 }
 
-.sabor-card:hover {
-    transform: translateY(-5px);
+.suscripcion small {
+    color: #657786;
 }
 
-.sabor-card img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-.sabor-card .card-body {
-    padding: 18px;
-}
-
-.sabor-card h5 {
-    color: #ff0a78;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.sabor-card p {
-    color: #333;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-.mejores-sabores {
-    padding: 40px 0 60px;
-}
-
-.subtitulo-sabores {
-    margin-top: -20px;
-    margin-bottom: 30px;
-    color: #222;
-}
+@media (max-width: 576px) {
+    .newsletter-contenedor iframe {
+        height: 360px;
+    }
 }
 
