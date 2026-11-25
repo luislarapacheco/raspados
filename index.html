@@ -162,34 +162,65 @@
     </div>
 </section>
 
-<section class="suscripcion py-5">
-    <div class="container text-center">
 
-        <span class="etiqueta">¡NO TE PIERDAS NADA!</span>
+<div class="newsletter-contenedor">
 
-        <h2>¡Suscríbete a La Frescura!</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
 
-        <p>
-            Recibe promociones, descuentos, ofertas 2x1
-            y novedades de nuestros deliciosos raspados.
-        </p>
+        <!-- Clave de Web3Forms -->
+        <input type="hidden" name="access_key"
+        value="695f44c3-39dd-45e0-85ff-60c8536bd36b">
 
-        <div class="newsletter-contenedor">
-            <iframe
-                width="540"
-                height="305"
-                src="https://3475ad88.sibforms.com/v2/serve/MUIFAEvPxKnqfcYPTzPZFA2sdmkhnvQ604u2f3mtCBBZmo4d_hE57yWQMgUX9nox3IVsFKn8-47QdUFL7pluHnCGtdx0Zqyl7t8RgQlEm_58zVCiUiO_J-WQ2Pn07QvfD7WTEt1nEs157GRURUi5B1fwqSajYn86Naj4nNpgRDFa_lYhxuSjIhpTxyXtjhtX85HZRe1Uoo_Q2XcuvQ=="
-                frameborder="0"
-                scrolling="auto"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
+        <input type="hidden" name="subject"
+        value="Nueva suscripción - La Frescura Raspados">
+
+        <input type="hidden" name="from_name"
+        value="La Frescura Raspados">
+
+        <!-- Protección contra spam -->
+        <input type="checkbox" name="botcheck"
+        style="display:none;">
+
+        <!-- Nombre -->
+        <div class="mb-3">
+            <input type="text"
+            name="name"
+            class="form-control"
+            placeholder="Escribe tu nombre"
+            required>
         </div>
 
-        <small>¡Gracias por ser parte de La Frescura!</small>
+        <!-- Correo -->
+        <div class="mb-3">
+            <input type="email"
+            name="email"
+            class="form-control"
+            placeholder="Tu correo electrónico"
+            required>
+        </div>
 
-    </div>
-</section>
+        <!-- Autorización -->
+        <div class="form-check mb-3">
+            <input type="checkbox"
+            class="form-check-input"
+            id="acepto"
+            name="consentimiento"
+            value="Acepto recibir promociones"
+            required>
+
+            <label class="form-check-label" for="acepto">
+                Acepto recibir promociones y novedades.
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-rosa">
+            ¡Quiero suscribirme!
+        </button>
+
+    </form>
+
+</div>
+
 
 <footer class="pie-pagina">
     <div class="container">
@@ -216,12 +247,21 @@
             </div>
             <div class="col-lg-3">
                 <h5>Síguenos</h5>
-                <div class="redes">
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="TikTok">TikTok</a>
-                </div>
-            </div>
+<div class="redes">
+
+    <a href="https://www.facebook.com/profile.php?id=61596878762252"
+       target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-facebook"></i> Facebook
+    </a>
+
+    <a href="https://www.instagram.com/frescuraraspados/"
+       target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-instagram"></i> Instagram
+    </a>
+
+
+
+</div>
         </div>
         <div class="copyright">
             © 2026 La Frescura Raspados. Todos los derechos reservados.
