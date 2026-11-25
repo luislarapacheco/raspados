@@ -581,34 +581,79 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
 }
+
+/* SECCIÓN DE SUSCRIPCIÓN */
+
+.suscripcion {
+    background: #eafaff;
+    padding: 60px 0;
+}
+
+.suscripcion h2 {
+    color: #0077b6;
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+.texto-suscripcion {
+    color: #243447;
+    max-width: 600px;
+    margin: 12px auto 25px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
 .newsletter-contenedor {
-    max-width: 580px;
+    max-width: 500px;
     margin: 25px auto;
-    padding: 15px;
+    padding: 30px;
     background: #d9f7f3;
     border: 2px solid #2ec4b6;
     border-radius: 22px;
-    box-shadow: 0 6px 18px rgba(46, 196, 182, 0.18);
-    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(46, 196, 182, 0.18);
 }
 
-.newsletter-contenedor iframe {
+.newsletter-contenedor .form-control {
+    border: 1px solid #b5e5df;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 15px;
+}
+
+.newsletter-contenedor .form-control:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+}
+
+.newsletter-contenedor .form-check-label {
+    color: #243447;
+    font-size: 14px;
+}
+
+.newsletter-contenedor .btn {
+    padding: 13px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.mensaje-suscripcion {
     display: block;
-    width: 100%;
-    max-width: 100%;
-    border: none;
-    border-radius: 15px;
-}
-
-.suscripcion small {
-    color: #657786;
+    color: #0077b6;
+    font-weight: 600;
+    margin-top: 15px;
 }
 
 @media (max-width: 576px) {
-    .newsletter-contenedor iframe {
-        height: 360px;
+    .newsletter-contenedor {
+        padding: 20px;
+    }
+
+    .suscripcion h2 {
+        font-size: 26px;
     }
 }
+
 
 /* LOGOS */
 .logo-imagen {

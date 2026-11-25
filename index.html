@@ -163,63 +163,83 @@
 </section>
 
 
-<div class="newsletter-contenedor">
+<section class="suscripcion py-5">
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <div class="container text-center">
 
-        <!-- Clave de Web3Forms -->
-        <input type="hidden" name="access_key"
-        value="695f44c3-39dd-45e0-85ff-60c8536bd36b">
+        <span class="etiqueta">¡NO TE PIERDAS NADA!</span>
 
-        <input type="hidden" name="subject"
-        value="Nueva suscripción - La Frescura Raspados">
+        <h2>¡Suscríbete a La Frescura!</h2>
 
-        <input type="hidden" name="from_name"
-        value="La Frescura Raspados">
+        <p class="texto-suscripcion">
+            Recibe promociones especiales, descuentos, ofertas 2x1
+            y novedades de nuestros deliciosos raspados.
+        </p>
 
-        <!-- Protección contra spam -->
-        <input type="checkbox" name="botcheck"
-        style="display:none;">
+        <div class="newsletter-contenedor">
 
-        <!-- Nombre -->
-        <div class="mb-3">
-            <input type="text"
-            name="name"
-            class="form-control"
-            placeholder="Escribe tu nombre"
-            required>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Clave de Web3Forms -->
+                <input type="hidden" name="access_key"
+                value="695f44c3-39dd-45e0-85ff-60c8536bd36b">
+
+                <input type="hidden" name="subject"
+                value="Nueva suscripción - La Frescura Raspados">
+
+                <input type="hidden" name="from_name"
+                value="La Frescura Raspados">
+
+                <!-- Protección contra spam -->
+                <input type="checkbox" name="botcheck" style="display:none;">
+
+                <!-- Nombre -->
+                <div class="mb-3">
+                    <input type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Escribe tu nombre"
+                    required>
+                </div>
+
+                <!-- Correo -->
+                <div class="mb-3">
+                    <input type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Tu correo electrónico"
+                    required>
+                </div>
+
+                <!-- Autorización -->
+                <div class="form-check mb-3 text-start">
+                    <input type="checkbox"
+                    class="form-check-input"
+                    id="acepto"
+                    name="consentimiento"
+                    value="Acepto recibir promociones"
+                    required>
+
+                    <label class="form-check-label" for="acepto">
+                        Acepto recibir promociones y novedades.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-rosa w-100">
+                    ¡Quiero suscribirme!
+                </button>
+
+            </form>
+
         </div>
 
-        <!-- Correo -->
-        <div class="mb-3">
-            <input type="email"
-            name="email"
-            class="form-control"
-            placeholder="Tu correo electrónico"
-            required>
-        </div>
+        <small class="mensaje-suscripcion">
+            ¡Gracias por ser parte de La Frescura! 💙
+        </small>
 
-        <!-- Autorización -->
-        <div class="form-check mb-3">
-            <input type="checkbox"
-            class="form-check-input"
-            id="acepto"
-            name="consentimiento"
-            value="Acepto recibir promociones"
-            required>
+    </div>
 
-            <label class="form-check-label" for="acepto">
-                Acepto recibir promociones y novedades.
-            </label>
-        </div>
-
-        <button type="submit" class="btn btn-rosa">
-            ¡Quiero suscribirme!
-        </button>
-
-    </form>
-
-</div>
+</section>
 
 
 <footer class="pie-pagina">
